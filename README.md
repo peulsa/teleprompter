@@ -2,20 +2,14 @@
 
 Aplicación web local para leer guiones con desplazamiento automático.
 
-## Dónde está el proyecto
-
-La carpeta está en:
-
-`C:\Users\Erika\Desktop\teleprompter`
-
 El archivo que inicia la aplicación es:
 
-`C:\Users\Erika\Desktop\teleprompter\index.html`
+`C:\...\...\...\teleprompter\index.html`
 
 ## Cómo iniciarlo
 
 1. Abre el Explorador de archivos de Windows.
-2. Entra a **Escritorio** y abre la carpeta **teleprompter**.
+2. Abre la carpeta **teleprompter**.
 3. Haz doble clic en `index.html`. Se abrirá en Chrome, Edge o Firefox.
 2. Pega el guion.
 3. Ajusta las palabras por minuto, tamaño, ancho y colores.
