@@ -1,14 +1,6 @@
 TELEPROMPTER - GUÍA DE INICIO
 =============================
 
-UBICACIÓN DEL PROYECTO
-----------------------
-La carpeta está en:
-C:\Users\Erika\Desktop\teleprompter
-
-El archivo que abre el programa es:
-C:\Users\Erika\Desktop\teleprompter\index.html
-
 CÓMO ABRIRLO
 ------------
 Opción 1 - La más sencilla:
@@ -32,10 +24,13 @@ CÓMO USARLO
 ------------
 1. Pega o escribe tu guion en el cuadro Tu guion.
 2. Ajusta la velocidad en palabras por minuto (PPM).
-3. Ajusta el tamaño de letra, ancho de lectura, interlineado y colores.
-4. Pulsa Iniciar para comenzar el desplazamiento.
-5. Pulsa Pausar para detenerlo sin perder la posición.
-6. Pulsa Reiniciar para volver inmediatamente al principio.
+3. Ajusta el tamaño de letra entre 12 y 100 píxeles.
+4. Ajusta el ancho de lectura entre 160 y 1.100 píxeles. Un ancho pequeño
+   reduce el recorrido de los ojos y ayuda a disimular la lectura.
+5. Ajusta el interlineado, la tipografía y los colores.
+6. Pulsa Iniciar para comenzar el desplazamiento.
+7. Pulsa Pausar para detenerlo sin perder la posición.
+8. Pulsa Reiniciar para volver inmediatamente al principio.
 
 MODO COMPACTO
 -------------
