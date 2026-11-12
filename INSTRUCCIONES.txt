@@ -1,0 +1,61 @@
+TELEPROMPTER - GUÍA DE INICIO
+=============================
+
+UBICACIÓN DEL PROYECTO
+----------------------
+La carpeta está en:
+C:\Users\Erika\Desktop\teleprompter
+
+El archivo que abre el programa es:
+C:\Users\Erika\Desktop\teleprompter\index.html
+
+CÓMO ABRIRLO
+------------
+Opción 1 - La más sencilla:
+1. Abre el Explorador de archivos de Windows.
+2. Entra a Escritorio.
+3. Abre la carpeta llamada teleprompter.
+4. Haz doble clic en index.html.
+5. El teleprompter se abrirá en tu navegador.
+
+Opción 2 - Desde Visual Studio Code:
+1. Abre Visual Studio Code.
+2. Selecciona Archivo > Abrir carpeta.
+3. Elige C:\Users\Erika\Desktop\teleprompter.
+4. Abre index.html.
+5. Si tienes Live Server, presiona el botón Go Live. También puedes hacer
+   clic derecho sobre index.html y elegir Open with Live Server.
+
+No necesitas usar npm install, npm run dev ni php artisan serve.
+
+CÓMO USARLO
+------------
+1. Pega o escribe tu guion en el cuadro Tu guion.
+2. Ajusta la velocidad en palabras por minuto (PPM).
+3. Ajusta el tamaño de letra, ancho de lectura, interlineado y colores.
+4. Pulsa Iniciar para comenzar el desplazamiento.
+5. Pulsa Pausar para detenerlo sin perder la posición.
+6. Pulsa Reiniciar para volver inmediatamente al principio.
+
+MODO COMPACTO
+-------------
+1. Pulsa Modo compacto para ocultar el panel de configuración.
+2. Para regresar, pulsa Salir del modo compacto en la parte superior derecha.
+3. También puedes presionar la tecla Esc.
+
+VENTANA FLOTANTE
+----------------
+Pulsa Abrir ventana flotante para abrir una ventana pequeña y ajustable.
+Puedes cambiar su ancho y alto arrastrando sus bordes. Esto reduce el
+movimiento de los ojos y ayuda a que la lectura se vea más natural.
+
+ATAJOS
+------
+Espacio: iniciar o pausar.
+R: reiniciar y volver al principio.
+Flecha arriba: aumentar la velocidad.
+Flecha abajo: disminuir la velocidad.
+F: entrar o salir de pantalla completa.
+Esc: salir del modo compacto o de pantalla completa.
+
+Los ajustes y el texto se guardan automáticamente en el navegador.

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Teleprompter local, ajustable y fácil de usar.">
+  <title>Teleprompter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell" id="appShell">
+    <header class="topbar">
+      <div>
+        <span class="eyebrow">Herramienta de lectura</span>
+        <h1>Teleprompter</h1>
+      </div>
+      <div class="topbar-actions">
+        <button class="button button-ghost" id="compactButton" type="button">Modo compacto</button>
+        <button class="button button-ghost" id="popoutButton" type="button">Abrir ventana flotante</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="control-panel" id="controlPanel">
+        <section class="panel-section">
+          <div class="section-heading">
+            <div>
+              <span class="step">01</span>
+              <h2>Tu guion</h2>
+            </div>
+            <span class="word-count" id="wordCount">0 palabras</span>
+          </div>
+          <label class="sr-only" for="scriptInput">Texto que se mostrará en el teleprompter</label>
+          <textarea id="scriptInput" rows="12" placeholder="Pega o escribe aquí el texto que quieres leer...">Hola. Este es tu nuevo teleprompter.
+
+Pega aquí el texto que quieras presentar y ajusta la velocidad, el tamaño de la letra, los colores y el ancho de lectura.
+
+Usa una ventana estrecha para que tus ojos recorran menos distancia y tu lectura se vea más natural.</textarea>
+          <div class="editor-actions">
+            <button class="text-button" id="sampleButton" type="button">Cargar ejemplo</button>
+            <button class="text-button danger" id="clearButton" type="button">Limpiar texto</button>
+          </div>
+        </section>
+
+        <section class="panel-section settings-section">
+          <div class="section-heading">
+            <div>
+              <span class="step">02</span>
+              <h2>Ajustes</h2>
+            </div>
+          </div>
+
+          <div class="settings-grid">
+            <label class="setting setting-wide">
+              <span><strong>Velocidad</strong><output id="wpmOutput">130 PPM</output></span>
+              <input id="wpmInput" type="range" min="40" max="350" step="5" value="130">
+              <small>Palabras por minuto</small>
+            </label>
+
+            <label class="setting">
+              <span><strong>Tamaño</strong><output id="fontSizeOutput">52 px</output></span>
+              <input id="fontSizeInput" type="range" min="24" max="100" step="2" value="52">
+            </label>
+
+            <label class="setting">
+              <span><strong>Ancho de lectura</strong><output id="widthOutput">620 px</output></span>
+              <input id="widthInput" type="range" min="280" max="1100" step="20" value="620">
+            </label>
+
+            <label class="setting">
+              <span><strong>Interlineado</strong><output id="lineHeightOutput">1.45</output></span>
+              <input id="lineHeightInput" type="range" min="1.1" max="2" step="0.05" value="1.45">
+            </label>
+
+            <label class="setting select-setting">
+              <span><strong>Tipografía</strong></span>
+              <select id="fontFamilyInput">
+                <option value="Inter, Arial, sans-serif">Moderna</option>
+                <option value="Arial, sans-serif">Arial</option>
+                <option value="Georgia, serif">Georgia</option>
+                <option value="Verdana, sans-serif">Verdana</option>
+              </select>
+            </label>
+
+            <label class="color-setting">
+              <span>Texto</span>
+              <input id="textColorInput" type="color" value="#f7f3ea">
+            </label>
+
+            <label class="color-setting">
+              <span>Fondo</span>
+              <input id="backgroundColorInput" type="color" value="#080b12">
+            </label>
+          </div>
+
+          <div class="toggle-row">
+            <label class="toggle"><input id="focusGuideInput" type="checkbox" checked><span></span>Guía de enfoque</label>
+            <label class="toggle"><input id="mirrorInput" type="checkbox"><span></span>Texto en espejo</label>
+          </div>
+        </section>
+      </aside>
+
+      <section class="stage-panel" aria-label="Vista del teleprompter">
+        <div class="stage-toolbar">
+          <div class="status-group">
+            <span class="status-dot" id="statusDot"></span>
+            <span id="statusText">Preparado</span>
+          </div>
+          <div class="shortcut-hint">Espacio: iniciar/pausar · R: reiniciar · ↑↓: velocidad</div>
+          <div class="stage-toolbar-actions">
+            <button class="button button-ghost compact-exit-button" id="compactExitButton" type="button">Salir del modo compacto</button>
+            <button class="icon-button" id="fullscreenButton" type="button" aria-label="Pantalla completa" title="Pantalla completa">⛶</button>
+          </div>
+        </div>
+
+        <div class="teleprompter-stage" id="teleprompterStage" tabindex="0">
+          <div class="focus-guide" id="focusGuide" aria-hidden="true"></div>
+          <div class="scroll-space scroll-space-top" aria-hidden="true"></div>
+          <article class="prompt-text" id="promptText"></article>
+          <div class="scroll-space" aria-hidden="true"></div>
+        </div>
+
+        <div class="transport">
+          <button class="button button-secondary" id="resetButton" type="button">↺ Reiniciar</button>
+          <button class="button button-primary" id="playButton" type="button">▶ Iniciar</button>
+          <span class="progress-label" id="progressLabel">0%</span>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
